@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# Ignore everything under `data/` except the `data/projects/` directory. Per-slug payloads are
+# runtime data (see `PROJECT_DATA_ROOT`); do not commit them—especially for public mirrors.
+# Keep `data/projects/.gitkeep` so `data/projects/` exists; Tailwind `@source` still sees a path.
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+/data/*
+!/data/projects/
+/data/projects/*
+!/data/projects/.gitkeep
+.env.local
